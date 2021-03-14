@@ -2,5 +2,7 @@ package-lock.json
 tsconfig.tsbuildinfo
 node_modules
 dist
-*.d.ts
-*.js.map
+
+# IDE files
+.idea
+.DS_Store
