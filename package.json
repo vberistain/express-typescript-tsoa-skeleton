@@ -1,0 +1,42 @@
+{
+    "name": "express-typescript-tsoa-skeleton",
+    "version": "1.0.0",
+    "description": "Skeleton project for a Express server with Typescript TSOA and TypeORM",
+    "scripts": {
+        "dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register --respawn --transpile-only ./server.ts",
+        "prod": "npm run build && node -r ./prod-paths.js ./dist/server.js",
+        "test": "NODE_ENV=test mocha 'src/**/*.test.ts' --watch",
+        "tsoa": "tsoa spec && tsoa routes",
+        "build": "NODE_ENV=production npm run build-ts",
+        "build-ts": "tsoa spec && tsoa routes && tsc -p . "
+    },
+    "keywords": [],
+    "author": "Victor Beristain",
+    "license": "ISC",
+    "main": "dist/server.js",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "config": "^3.3.6",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "http-status-codes": "^2.1.4",
+        "swagger-ui-express": "^4.1.6",
+        "tsoa": "^3.5.2"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.34",
+        "@types/chai": "^4.2.15",
+        "@types/config": "0.0.38",
+        "@types/cors": "^2.8.10",
+        "@types/express": "^4.17.11",
+        "@types/http-status-codes": "^1.2.0",
+        "@types/mocha": "^8.2.1",
+        "@types/swagger-ui-express": "^4.1.2",
+        "chai": "^4.3.4",
+        "mocha": "^8.3.2",
+        "ts-node": "^8.4.1",
+        "ts-node-dev": "^1.0.0-pre.43",
+        "tsconfig-paths": "^3.9.0",
+        "typescript": "^3.6.3"
+    }
+}
