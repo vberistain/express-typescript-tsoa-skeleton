@@ -1,4 +1,4 @@
-# Skeleton project with the following libraries:
+# Skeleton project including the following libraries:
 
 -   Express Server
 -   Typescript
